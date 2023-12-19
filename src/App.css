@@ -1,38 +1,25 @@
-.App {
-  text-align: center;
+/* 
+
+LIGHT MODE:
+-BACKGROUND COLOR: #eeefff
+-NAVBAR COLOR: #e4e5f3
+-PRIMARY COLOR: #0d0d0d
+
+
+DARK MODE: 
+-Navbar color: #1A1A2E;
+-background color: #1c1c36;
+-Primary Color : peru
+-OnPrimary Color: #131319
+-Text Color: whitesmoke
+*/
+
+body{
+    background-color: #eeefff;
+    /* background-color: #1c1c36; */
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.set{
+    color:rgb(50, 50, 50)
 }
