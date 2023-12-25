@@ -10,9 +10,7 @@ import {
   Button,
   Grid,
 } from "@mui/material";
-
-import AddIcon from '@mui/icons-material/Add';
-import { AddNoteBtn, AddNoteModal } from "../Assets/Assets";
+import { AddNoteBtn, AddNoteDialog } from "../Assets/Assets";
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -33,7 +31,7 @@ const Home = () => {
     <MainBox padding='3% 6%' border='2px solid black'>
     
     <AddNoteBtn handleClick={handleOpen}/>
-    <AddNoteModal open={openModal} close={handleClose}/>
+    <AddNoteDialog open={openModal} close={handleClose}/>
     </MainBox>
   );
 };
