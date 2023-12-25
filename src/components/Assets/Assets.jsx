@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Backdrop, Box, Button, Modal, Fade, Typography} from "@mui/material";
+import { Backdrop, Box, Button, Modal, Fade,Dialog, TextField, DialogTitle, DialogContent, Divider, DialogActions} from "@mui/material";
 // import styled from "@emotion/styled";
 import AddIcon from "@mui/icons-material/Add";
 
@@ -27,38 +27,27 @@ export const AddNoteBtn = ({handleClick}) => {
 
 
 // This is the modal for Adding the Notes
-export const AddNoteModal = ({open , close}) =>{
+export const AddNoteDialog = ({open , close}) =>{
 
     return(
       
-       <Modal 
-       aria-labelledby="transition-modal-title"
+       <Dialog 
        open={open}
        onClose={close}
-        closeAfterTransition
-        slots={{backdrop: Backdrop}}
-        slotProps={{
-            backdrop:{
-                timeout: 500,
-            }
-        }}
+       fullWidth
+       sx={{textAlign:'center'}}
        >
-       <Fade in={open}>
-       <Box
-       position='absolute'
-       top='50%'
-       left='35%'
-       transform='translate(-50%, 50%)'
-       width='600px'
-       bgcolor='whitesmoke'
-       boxShadow={24}
-       border='2px solid #000'
-       p='24px'
-       >
-       <Typography>Hello This is a modal</Typography>
+       <DialogTitle>Notes Form</DialogTitle>
+       <Divider>Add Note</Divider>
+       <DialogContent>
+       <Box display='flex' flexDirection='column' gap='1.5rem' padding='1% 3%'>
+       <TextField variant="outlined" label='Title' placeholder="Enter Title..."/>
+       <TextField variant="outlined" label='Description' multiline rows={4} placeholder="Enter Description..."/>
        </Box>
-       </Fade>
-       
-       </Modal>
+       <DialogActions>
+       <Button>Add</Button>
+       </DialogActions>
+       </DialogContent>
+       </Dialog>
     )
 }
